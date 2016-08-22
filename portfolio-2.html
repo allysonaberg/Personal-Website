@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, shrink-to-fit=no, initial-scale=1" name=
+    "viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>ALLYSON ABERG</title><!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"><!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type=
+    "text/css">
+    <link href=
+    "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container" id="portpage">
+        <!---TEXT=-->
+        <div class="col-md-4 text-center" id="textcontainer">
+            <!-- Content goes here -->
+            <a class="btn btn-light btn-lg pull-right toggle" href=
+            "index.html#portfolio" id="project-close"><i class=
+            "fa fa-times"></i></a>
+            <header id="textheader">
+                <h1>Personal Website</h1>
+                <p class="lead" id="subtitleport">allysonaberg.com</p>
+            </header>
+            <p id="descriptionport" style="font-size: 100%">allysonaberg.com is
+            built with bootstrap, and really helped in my learning of html and
+            css. Some of the things I learned included: -Basics of CSS3/HTML5
+            -Animations (like the rocket on my front page) -Creating responsive
+            themes (For desktop, tablet, and mobile) It also gave me a chance
+            to practice my photoshop/sketch skills, as I made the backgrounds
+            and designed the colour scheme.</p>
+        </div><!---PHOTO=-->
+        <div class="col-md-8 text-center" id="photocontainer">
+        <!-- Content goes here -->
+        <img id="web-1" src="img/portfolio-2.jpg"> <img id="web-2" src=
+        "img/bg.jpg"></div>
+    </div><!-- jQuery -->
+    <script src="js/jquery.js">
+    </script> 
+    <script src="js/modernizr.custom.js">
+    </script> <!-- Bootstrap Core JavaScript -->
+     
+    <script src="js/bootstrap.min.js">
+    </script> <!-- Custom Theme JavaScript -->
+     
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+            // Closes the portfolio
+    $("#project-close").click(function(e) {
+        e.preventDefault();
+        $("#portfolio").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
+</body>
+</html>
+
