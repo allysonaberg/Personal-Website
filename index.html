@@ -140,7 +140,7 @@
                                 "progress-completed">80%</span>
                             </div>
                             <div class="col-lg-10 col-lg-offset-1">
-                                <p>Hobbies</p><!-- Callout=-->
+                                <p id="hobbiestext">Hobbies</p><!-- Callout=-->
                                 <aside class="callout">
                                     <div class="text-vertical-center">
                                         <div class="col-md-3 col-sm-6">
@@ -199,13 +199,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Projects</h2>
-                    <p class="lead">Some things I've been working on!</p>
-                    <section class="portfolio" id="portfolio">
+                    <h2 id="mobilesitetitle">Projects</h2>
+                    <p class="lead" id="mobilesitehead">Some things I've been working on!</p>
+                    <p class="lead" id="mobilesitetext"> Check them out on my full site! </p>
                         <ul class="grid cs-style-1">
                             <li>
                                 <figure>
-                                    <img alt="img01" src="img/portfolio-1.jpg">
+                                    <img alt="portfolio 1" src="img/portfolio-10.jpg">
                                     <figcaption>
                                         <h3>HydraChew</h3><span>An
                                         Entrepreneural Project</span> <a href=
@@ -215,7 +215,7 @@
                             </li>
                             <li>
                                 <figure>
-                                    <img alt="img02" src="img/portfolio-2.jpg">
+                                    <img alt="portfolio 2" src="img/portfolio-20.jpg">
                                     <figcaption>
                                         <h3>Personal
                                         Website</h3><span>allysonaberg.com</span>
@@ -226,7 +226,7 @@
                             </li>
                             <li>
                                 <figure>
-                                    <img alt="img04" src="img/portfolio-3.jpg">
+                                    <img alt="portfolio 3" src="img/portfolio-30.jpg">
                                     <figcaption>
                                         <h3>Swift</h3><span>Project-Based
                                         Learning</span> <a href=
@@ -236,7 +236,7 @@
                             </li>
                             <li>
                                 <figure>
-                                    <img alt="img05" src="img/portfolio-4.jpg">
+                                    <img alt="portfolio 4" src="img/portfolio-40.jpg">
                                     <figcaption>
                                         <h3>MOHP</h3><span>UI/UX
                                         Development</span> <a href=
@@ -276,7 +276,7 @@
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-        // Closes the portfolio
+    // Closes the portfolio
     $("#project-close").click(function(e) {
         e.preventDefault();
         $("#portfolio").toggleClass("active");

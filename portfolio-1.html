@@ -28,7 +28,7 @@
         <!---TEXT=-->
         <div class="col-md-4 text-center" id="textcontainer">
             <!-- Content goes here -->
-            <a class="btn btn-light btn-lg pull-right toggle" href="index.html#portfolio" id="project-close"><i class="fa fa-times"></i></a>
+            <a class="btn btn-light btn-lg pull-right toggle" href="/#portfolio" id="project-close"><i class="fa fa-times"></i></a>
             <header id="textheader">
                 <h1>HydraChew</h1><i class="lead" id="subtitleport">An
                 entrepreneural project</i>
@@ -40,8 +40,8 @@
             that reduces risk of dehydration by alerting the user of their
             hydration level using the pH of their saliva. A large part of my
             contribution to this project was the design of the marketing
-            materials and logos, seen below. Overall, the experience taught me
-            not only about the hardships of entrepreneurship, but elements of
+            materials and logos. Overall, the experience taught me
+            not only about the hardships of entrepreneurship, but about elements of
             design and how to design something specifically for the customer
             rather than the company.</p><a class="btn btn-light btn-lg" href=
             "http://www.shad.ca/2015-SHAD-Cup-Projects.htm" id="moreinfo"
@@ -49,8 +49,8 @@
         </div><!---PHOTO=-->
         <div class="col-md-8 text-center" id="photocontainer">
         <!-- Content goes here -->
-        <img id="hydra-1" src="img/portfolio-1.jpg"> <img id="hydra-2" src=
-        "img/hydra-2.jpg"></div>
+        <img id="hydra-1" src="img/portfolio-1.jpg" alt = "hydrachew brochure #1"> <img id="hydra-2" src=
+        "img/hydra-2.jpg" alt = "hydrachew brochure #2"></div>
     </div><!-- jQuery -->
     <script src="js/jquery.js">
     </script> 
@@ -70,11 +70,6 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
-    });
-            // Closes the portfolio
-    $("#project-close").click(function(e) {
-        e.preventDefault();
-        $("#portfolio").toggleClass("active");
     });
     // Scrolls to the selected menu item on the page
     $(function() {

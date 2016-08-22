@@ -37,16 +37,18 @@
             </header>
             <p id="descriptionport" style="font-size: 100%">allysonaberg.com is
             built with bootstrap, and really helped in my learning of html and
-            css. Some of the things I learned included: -Basics of CSS3/HTML5
-            -Animations (like the rocket on my front page) -Creating responsive
-            themes (For desktop, tablet, and mobile) It also gave me a chance
-            to practice my photoshop/sketch skills, as I made the backgrounds
+            css. Some of the things I learned included:
+            Basics of CSS3/HTML5,
+            animations (like the rocket on my front page),
+            creating responsive themes (For desktop, tablet, and mobile),
+            optimising the speed of my website by compressing images and minimising my HTML/CSS.
+            It also gave me a chance to practice my photoshop/sketch skills, as I made the backgrounds
             and designed the colour scheme.</p>
         </div><!---PHOTO=-->
         <div class="col-md-8 text-center" id="photocontainer">
         <!-- Content goes here -->
-        <img id="web-1" src="img/portfolio-2.jpg"> <img id="web-2" src=
-        "img/bg.jpg"></div>
+        <img id="web-1" src="img/portfolio-2.jpg" alt ="Personal Website"> <img id="web-2" src=
+        "img/bg.jpg" alt = "personal website background"></div>
     </div><!-- jQuery -->
     <script src="js/jquery.js">
     </script> 
@@ -66,11 +68,6 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
-    });
-            // Closes the portfolio
-    $("#project-close").click(function(e) {
-        e.preventDefault();
-        $("#portfolio").toggleClass("active");
     });
     // Scrolls to the selected menu item on the page
     $(function() {
