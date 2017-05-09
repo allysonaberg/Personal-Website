@@ -33,20 +33,20 @@
 </head>
 <body>
     <!-- Navigation-->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark-menu btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>ALLYSON ABERG</a>
-            </li>
-            <li>
+            <a id="menu-close" href="#" class="btn btn-dark-menu btn-lg toggle"><i class="fa fa-bars"></i></a>
+            <li class ="sidebar-brand-top">
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
-            <li>
+            <li class ="sidebar-brand">
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
-            <li>
+            <li class ="sidebar-brand">
+                <a href="#about" onclick=$("#menu-close").click();>Work</a>
+            </li>
+            <li class ="sidebar-brand">
                 <a href="#portfolio" onclick=$("#menu-close").click();>Projects</a>
             </li>
         </ul>
@@ -68,6 +68,9 @@
             <div class="container" id="rocketcontainer">
                 <div class="rocket"></div>
             </div>
+            <div id = "waterfall">
+            </div>
+
         </div>
     </header><!-- About =-->
     <section class="about" id="about">
@@ -77,7 +80,9 @@
                     <h2>About Me</h2>
                     <p class="lead">I'm a Systems Design Engineering Student at
                     UW, with a passion for design, coding, and
-                    entrepreneurship!</p>
+                    entrepreneurship! While I'm still learning new concepts and languages every day, I 
+                    currently have experience with:  </p>
+                    <p> LANGUAGES (cool way to show??) </p>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -138,7 +143,7 @@
                                 </div><span class="progress-type">Photoshop
                                 PS6</span> <span class=
                                 "progress-completed">80%</span>
-                            </div>
+<!--                             </div>
                             <div class="col-lg-10 col-lg-offset-1">
                                 <p id="hobbiestext">Hobbies</p><!-- Callout=-->
                                 <aside class="callout">
@@ -188,7 +193,7 @@
                                         </div>
                                     </div>
                                 </aside>
-                            </div>
+                            </div> -->
                         </div><!-- /.row (nested) -->
                     </div><!-- /.col-lg-10 -->
                 </div><!-- /.row -->
@@ -205,6 +210,16 @@
                         <ul class="grid cs-style-1">
                             <li>
                                 <figure>
+                                    <img alt="portfolio 4" src="img/portfolio-50.jpg">
+                                    <figcaption>
+                                        <h3>ScaryBot</h3><span>A Facebook Messenger Chatbot
+                                        </span> <a href=
+                                        "portfolio-5.html">Check it out</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
                                     <img alt="portfolio 1" src="img/portfolio-10.jpg">
                                     <figcaption>
                                         <h3>HydraChew</h3><span>An
@@ -213,7 +228,7 @@
                                     </figcaption>
                                 </figure>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <figure>
                                     <img alt="portfolio 2" src="img/portfolio-20.jpg">
                                     <figcaption>
@@ -223,7 +238,7 @@
                                         out</a>
                                     </figcaption>
                                 </figure>
-                            </li>
+                            </li> -->
                             <li>
                                 <figure>
                                     <img alt="portfolio 3" src="img/portfolio-30.jpg">
@@ -244,19 +259,22 @@
                                     </figcaption>
                                 </figure>
                             </li>
-                            <li></li>
+                            <li></li>                            
                         </ul>
+                        <a class=
+                         "btn btn-light btn-lg" href="https://github.com/allysonaberg" id=
+                        "moreprojects" target="_blank">More on my github!</a>  
                     </section>
                 </div><!-- /.col-lg-10 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- Footer -->
-    <footer>
+<!--     <footer>
         <div class="container">
             <p class="text-muted">Copyright &copy; Allyson Aberg 2016</p>
         </div><a class="btn btn-dark btn-lg" href="#top" id="to-top"><i class=
         "fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer><!-- jQuery -->
+    </footer><!-- jQuery --> 
     <script src="js/jquery.js">
     </script> 
     <script src="js/modernizr.custom.js">
