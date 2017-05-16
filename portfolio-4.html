@@ -35,30 +35,17 @@
                 <h1>MOHP</h1>
                 <p class="lead" id="subtitleport">UI/UX Development</p>
             </header>
-            <p id="descriptionport" style="font-size: 100%">This project was my
-            first true introduction to UI/UX development. I've paired it with
-            my learning of Swift to hopefully, make this a real app! Using
-            Photoshop CS6 and my own creativity, I designed an app for the
-            mobile dental health company: Mobile Oral Health Professionals, or
-            MOHP for short. I used these same skills to create the company's
-            official logo. The app is designed for patients to keep in touch
-            with their hygienists by allowing them to describe or upload images
-            of newest developments in their oral health and receive feedback,
-            as well as book appointments with these hygienists. My goal while
-            designing this app was to make it both aesthetically pleasing and
-            easy to use, hence the simple colour scheme and use of whitespace.
-            It was truly a project which helped me to expand my skills in UI/UX
-            development.</p>
+            <p id="descriptionport" style="font-size: 100%">This project really helped me to expand my knowledge of Web Development and UI/UX Development. I created for a company called Mobile Oral Health Professionals, or MOHP for short. In all, I designed their logo, website (www.mobileoralhealth.com) and the UI/UX for a future app. The logo was created with Photoshop cs6 and Sketch, and attempts to relay to customers the purpose of the company (that it provides mobile dental cleanings) in a simple yet effective way (it's a tooth with a car incorporated into it!). The company's website was a great way to expand my knowledge in the area of web development, and was built with bootstrap. Finally, the UI/UX for the MOHP application really helped to solidify my understanding of basic design principles such as use of whitespace and colourscheme. It was a job that seemed more like a personal project as a result of all the learning I did!</p> <a class="btn btn-light btn-lg" href=
+            "http://www.mobileoralhealth.com" id="moreinfo"
+            target="_blank">MOHP Website</a>
         </div><!---PHOTO=-->
         <div class="col-md-8 text-center" id="photocontainer">
         <!-- Content goes here -->
-        <img id="portfolio-4" src="img/portfolio-4.jpg" alt="MOHP app">
+        <img id="portfolio-4.0" src="img/MOHPWeb1.jpg" alt="MOHP Website Homepage">
+        <img id="portfolio-4.1" src="img/MOHPWeb2.jpg" alt="MOHP Website">
         <img id="mohp-1" src="img/mohp-1.jpg" alt="MOHP app login">
         <img id="mohp-2" src="img/mohp-2.jpg" alt="MOHP app calendar">
         <img id="mohp-3" src="img/mohp-3.jpg" alt="MOHP app symptoms">
-        <img id="mohp-4" src="img/mohp-4.jpg" alt="MOHP app form">
-        <img id="mohp-5" src="img/mohp-5.jpg" alt="MOHP app navigation">
-        <img id="mohp-5" src="img/mohp-6.jpg" alt="MOHP app results">
 
     </div><!-- jQuery -->
     <script src="js/jquery.js">
@@ -68,78 +55,5 @@
      
     <script src="js/bootstrap.min.js">
     </script> <!-- Custom Theme JavaScript -->
-     
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
-    </script>
 </body>
 </html>
