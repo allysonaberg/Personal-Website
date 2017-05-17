@@ -10,6 +10,61 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
 }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body { margin: 0; }
+
+.columnsContainer, footer, header { position: relative; margin: 0em; }
+
+.leftColumn, .rightColumn, footer, header { #ccc; padding: 1.25em; }
+
+.leftColumn { margin-bottom: .5em; }
+
+.nav {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+.inline-items {
+  margin-top: 0;
+}
+
+.inline-items li {
+  margin-left: 0;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inline-items li:first-child {
+  margin-left: 0;
+  border: none;
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.inline-items li:last-child {
+  padding-right: 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 45.5em ) {
+  .leftColumn { margin-right: 21.5em; }
+    .rightColumn { position: absolute; top: 0; right: 0; width: 18.75em; }   
+
+}
 /************************************************************************************
 GENERAL STRUCTURE
 *************************************************************************************/
@@ -139,80 +194,6 @@ h3,
     background-size: cover;
     -o-background-size: cover;
 }
-
-/************************************************************************************
-MEDIA QUERIES
-*************************************************************************************/
-/* for 980px or less */
-
-@media screen and (max-width: 980px) {
-    #pagewrap {
-        width: 94%;
-    }
-    #content {
-        width: 41%;
-        padding: 1% 4%;
-    }
-    #middle {
-        width: 41%;
-        padding: 1% 4%;
-        margin: 0px 0px 5px 5px;
-        float: right;
-    }
-    #sidebar {
-        clear: both;
-        padding: 1% 4%;
-        width: auto;
-        float: none;
-    }
-    header,
-    footer {
-        padding: 1% 4%;
-    }
-}
-/* for 700px or less */
-
-@media screen and (max-width: 600px) {
-    #content {
-        width: auto;
-        float: none;
-    }
-    #middle {
-        width: auto;
-        float: none;
-        margin-left: 0px;
-    }
-    #sidebar {
-        width: auto;
-        float: none;
-    }
-}
-/* for 480px or less */
-
-@media screen and (max-width: 480px) {
-    header {
-        height: ;
-        width: 100%;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    #sidebar {
-        display: none;
-    }
-    .text-vertical-center {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .text-vertical-center h1 {
-        margin: 0;
-        padding: 0;
-        font-size: 4.5em;
-        font-weight: 700;
-    }
-}
-
 
 /************************************************************************************
 CUSTOM BUTTONS
@@ -458,12 +439,14 @@ ABOUT
 #mepic {
     margin-top: 5%;
     width: 90%;
+    margin-right: 20%;
     height: auto;
-    display: inline-table;
 }
 
 .about {
     padding: 35px 5px 80px 0px;
+    margin-left: 2em;
+    margin-right: 2em;
     color: #000;
 }
 
@@ -661,6 +644,7 @@ BLOG
     height: 100%;
     position: fixed;
     top: 0;
+    overflow: scroll;
 }
 #textcontainer > p {
     margin-top: 0.5em;
@@ -717,8 +701,13 @@ MOBILE
         -o-background-size: cover;
     }
     #mobilesitetext {
-        margin-top: -5%;
+        margin-top: 1%;
         visibility: visible;
+        text-align: center;
+
+    }
+    #mobilesitehead {
+        text-align: center;
     }
     #hobbiestext {
         visibility: hidden;
@@ -746,6 +735,7 @@ SIDEBAR
     }
     .lead {
         margin-left: 5%;
+        text-align: left;
     }
     h3,
     .h3 {
@@ -825,6 +815,85 @@ ROCKET
             -webkit-transform: rotate(360deg);
             transform: rotate(0deg);
         }
+    }
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+
+@media screen and (max-width: 980px) {
+    #pagewrap {
+        width: 94%;
+    }
+    #content {
+        width: 41%;
+        padding: 1% 4%;
+    }
+    #middle {
+        width: 41%;
+        padding: 1% 4%;
+        margin: 0px 0px 5px 5px;
+        float: right;
+    }
+    #sidebar {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+    }
+    header,
+    footer {
+        padding: 1% 4%;
+    }
+}
+/* for 700px or less */
+
+@media screen and (max-width: 600px) {
+    #content {
+        width: auto;
+        float: none;
+    }
+    #middle {
+        width: auto;
+        float: none;
+        margin-left: 0px;
+    }
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+    #mepic {
+        margin-top: -5%;
+        width: 50%;
+        height: auto;
+
+    }
+}
+/* for 480px or less */
+
+@media screen and (max-width: 480px) {
+    header {
+        height: ;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #sidebar {
+        display: none;
+    }
+    .text-vertical-center {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .text-vertical-center h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 4.5em;
+        font-weight: 700;
     }
 }
 
