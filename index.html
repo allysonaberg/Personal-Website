@@ -11,7 +11,7 @@
 
 
 
-    <title>ALLYSON ABERG</title>
+    <title>Allyson Aberg</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,133 +22,81 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 <body>
     <!-- Navigation-->
-    <a id="menu-toggle" href="#" class="btn btn-dark-menu btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-dark-menu btn-lg toggle"><i class="fa fa-bars"></i></a>
-            <li class ="sidebar-brand-top">
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-            <li class ="sidebar-brand">
-                <a href="#about" onclick=$("#menu-close").click();>About</a>
-            </li>
-            <li class ="sidebar-brand">
-                <a href="#portfolio" onclick=$("#menu-close").click();>Projects</a>
-            </li>
-        </ul>
+    </nav>
+    <nav class = "navigation">
+<!--         <a href="javascript:Navigation.scrollTo('.top');" class = "active">
+ -->            <span>
+                <button href = "#pictop" class = "navBubble" id = "button1"></button>
+            </span>
+            <span>
+                <button href = "#aboutme" class = "navBubble" id = "button2"></button>
+            </span>
+            <span>
+                <button href = "#portfolio" class = "navBubble" id = "button3"></button>
+            </span>
+        </a>
     </nav>
 
+  </nav>
 
-  </nav><!-- HOME -->
-    <header class="header" id="top">
-        <div class="text-vertical-center">
-            <h1>Allyson Aberg</h1>
-            <h3>//University of Waterloo Engineering Student</h3><br>
-            <a class="btn btn-dark btn-lg" href="img/AllysonAbergResume.pdf" id="resume" target="_blank">Resume</a>
-            <a class="fa fa-envelope-square fa-3x" href=
-            "mailto:allya7897@gmail.com?Subject=Reaching%20Out!" id=
-            "email"></a> <a class="fa fa-linkedin-square fa-3x" href=
-            "https://ca.linkedin.com/in/allysonaberg" id="linkedin" target=
-            "_blank"></a> <a class="fa fa-github-square fa-3x" href=
-            "https://github.com/allysonaberg" id="github" target="_blank"></a>
-            <div class="container" id="rocketcontainer">
-                <div class="rocket"></div>
-            </div>
 
-        </div>
-    </header>
-    </header>
+  <!-- HOME -->           
+ <section class = "headerpic" id = "pictop">
+                <h1 class = 'number'>01</h1>
+                <h1 id = "title">Allyson<br/>Aberg</h1>
+                <div class = 'line'>
+                    <hr></hr>
+                    <button class = 'info' href="img/AllysonAbergResume.pdf">Resume</button>
+                    <button class = 'info' href="https://github.com/allysonaberg">Github</button>
+                    <button class = 'info' href="mailto:allya7897@gmail.com?Subject=Reaching%20Out!">Email</button>
+                 </div>
+                <div class="container" id="rocketcontainer">
+                    <div class="rocket"></div>
+                </div>
+</section>
 
-    <section class = "about" id = "about">
+<!-- ABOUT -->           
+<section class = "about" id = "aboutme">
+
+        <h1 class = 'numberYellow'>02</h1>
+        <h1 class = 'h1yellow'>About Me</h1>
+
         <div class ="text-vertical-center">
-        <h2>About Me</h2>
-
-        <div class="columnsContainer">
-
-        <div class="leftColumn">
-                <p class="lead">I'm a Systems Design Engineering Student at
-                    UW, with a passion for design, coding, and
-                    entrepreneurship! While I'm still learning new concepts and languages every day, I 
-                    currently have a lot of experience with <span style = "color:#f0ad4e">Swift,
-                    <span style = "color:#337ab7"> Java, <span style = "color:#5cb85c">Javascript,<span style = "color:black"> and <span style = "color:#d9534f">C++.
-                     </p>
-                     <p class = "lead"> My latest co-op employment as a <span style = "color:#f0ad4e">mobile developer
-                     <span style = "color:black"> at <span style = "color:#337ab7">Nascent Digital <span style = "color:black">in Toronto taught me a lot about <span style = "color:#d9534f">iOS development <span style = "color:black"> and <span style = "color:#5cb85c">design principles,<span style = "color:black"> and gave me the 
-                        opportunity to work with some amazing people along the way! </p>
-                    <p class = "lead"> I hope to continue learning mobile and web development through not only future
-                        co-op jobs, but also my own projects. </p>
-
+            <div class="columnsContainer">
+                <div class="leftColumn">
+                    <p class="aboutText"> I'm currently studying Systems Design Engineering at the University of Waterloo! On my own time, I like to play around with machine learning algorithms and new iOS/macOS frameworks. </p>
+                    <p class = "aboutText"> I've co-oped at some awesome companies like TunnelBear and Nascent, and am currently looking for a Summer 2018 placement!</p>
+                </div>
+                <div class="rightColumn">
+                    <img src="img/astro-person.png" id = "mepic"/>
+                </div>
+            </div>
         </div>
 
-        <div class="rightColumn">
-        <img src="img/ALLY.jpg" id = "mepic"/>
+</section>
 
-        </div>
-    </div>
+<!---PORTFOLIO! -->
+<section class="portfolio" id="portfolio">
 
-    </div>
-    </section>
+    <h1 class = 'numberYellow'>03</h1>
+    <h1 class = 'h1yellow'>PROJECTS</h1>
 
-    <!---PORTFOLIO! -->
-    <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 id="mobilesitetitle">Projects</h2>
-                    <p class="lead" id="mobilesitehead">Some things I've been working on</p>
-                    <p class="lead" id="mobilesitetext"> <strong>Check them out on my full site! </strong></p>
-                        <ul class="grid cs-style-1">
-                            <li>
-                                <figure>
-                                    <img alt="portfolio 4" src="img/portfolio-50.jpg">
-                                    <figcaption>
-                                        <h3>ScaryBot</h3><span>A Facebook Messenger Chatbot
-                                        </span> <a href=
-                                        "portfolio-5.html">Check it out</a>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img alt="portfolio 1" src="img/vision.jpg">
-                                    <figcaption>
-                                        <h3>Vision</h3><span>Node.js and 3D Printed Eyewear</span> <a href=
-                                        "portfolio-6.html">Check it out</a>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img alt="portfolio 3" src="img/portfolio-30.jpg">
-                                    <figcaption>
-                                        <h3>Left Shark</h3><span>A Swift Data Aggregator</span> <a href=
-                                        "portfolio-3.html">Check it out</a>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img alt="portfolio 4" src="img/newhydra-min.jpg">
-                                    <figcaption>
-                                        <h3>HydraChew</h3><span>An Entrepreneurial Project</span> <a href=
-                                        "portfolio-1.html">Check it out</a>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                        </ul>
-                        <a class=
-                         "btn btn-light btn-lg" href="https://github.com/allysonaberg" id=
-                        "moreprojects" target="_blank">More on my github!</a>   
+            <div class = "btn-group">
+                <button id = "project1" href = "portfolio 4"></button>
+                <button id = "project2" href = "portfolio 1"></button>
+                <button id = "project3" href = "portfolio 3"></button>
+                <button id = "project4" href = "portfolio 2"></button>
+            </div>  
+        </div>
 
-                    </section>
-                </div><!-- /.col-lg-10 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- Footer -->
+</section><!-- Footer -->
     <script src="js/jquery.js">
     </script> 
     <script src="js/modernizr.custom.js">

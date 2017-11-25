@@ -7,7 +7,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue.oft');
     color: #666;
 }
 
@@ -15,14 +16,144 @@ body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
-body { margin: 0; }
+body { margin: 0; 
+    }
 
-.columnsContainer, footer, header { position: relative; margin: 0em; }
+.columnsContainer, footer, header { 
+    position: relative; margin: 0em;
+    margin-top: -1em;
+ }
 
-.leftColumn, .rightColumn, footer, header { #ccc; padding: 1.25em; }
+.leftColumn, .rightColumn, footer{ #ccc; padding: 1.55em; }
 
-.leftColumn { margin-bottom: .5em; }
+.leftColumn {
+ margin-bottom: 5em;
+ color: #fff;
+ text-align: left;
+ margin-top: -4em;
+ margin-left: 20em;
+ width: 40em;
+  }
 
+.number, .numberYellow {
+    font-size: 150px;
+    margin-top: 0.15em;
+    margin-right: 0.1em;
+    color: #f4b125;
+}
+
+.number {
+    margin-right: -0.4em;
+}
+
+.navigation {
+    -webkit-transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
+    transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    -ms-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+    position: fixed;
+    top: 19em;
+    right: 3.2em;
+    width: 40px;
+    z-index: 100;
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.navBubble {
+    display:block;
+    width:25px;
+    height:25px;
+    line-height:50px;
+    border: 1px solid #f4b125;
+   border: none;
+    border-radius: 50%;
+    text-align:center;
+    text-decoration:none;
+    background: transparent;
+    font-size:16px;
+    color: #f4b125;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 1.3em;
+    line-height: 19px;
+}
+
+#button1 {
+/*    background: url(../img/planet1.png) no-repeat center center;
+*/}
+
+#button2 {
+/*        background: url(../img/planet2.png) no-repeat center center;
+*/}
+
+#button3 {
+/*        background: url(../img/planet3.png) no-repeat center center;
+*/}
+
+.navBubble:hover {
+    border-color: #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navBubble:active, .navBubble:focus{
+    text-decoration: none;
+    color: #f4b125;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    color: #000;
+}
+
+.line {
+    margin-right: 9em;
+    margin-left: 53em;
+    text-align: right;
+}
+
+.info {
+    font-family: BebasNeue;
+    font-weight: regular;
+    letter-spacing: 2px;
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    margin-top: -20px;
+    margin-left: 82%;
+    border: none;
+    text-align: left;
+    line-height: 10px;
+}
+
+.info:hover, .info:active {
+    color: #f4b125;
+    text-decoration: none;
+    border: none;
+}
+.navBubbleText:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navBubbleText:active {
+    text-decoration: none;
+    color: #fff;
+}
 .nav {
   list-style: none;
   margin-left: 0;
@@ -65,18 +196,28 @@ body { margin: 0; }
     .rightColumn { position: absolute; top: 0; right: 0; width: 18.75em; }   
 
 }
+
+.work {
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
+}
 /************************************************************************************
 GENERAL STRUCTURE
 *************************************************************************************/
+#aboutText {
+    margin-top: 1em;
+}
 #pagewrap {
     padding: 5px;
     width: 960px;
     margin: 20px auto;
 }
 header {
-    height: 100px;
-    padding: 0 15px;
-}
+    height: 10px;
+/*    padding: 0 15px;
+*/}
 #content {
     width: 290px;
     float: left;
@@ -113,7 +254,7 @@ header,
 
 }
 h2 {
-    font-size: 40px;
+    font-size: 20px;
 }
 html,
 body {
@@ -143,15 +284,41 @@ MEDIA QUERIES
 *************************************************************************************/
 h1,
 .h1 {
-    font-size: 35px;
-    color: #d9534f;
-    margin-top: -2px;
+    font-family: BebasNeue;
+    font-size: 115px;
+    color: #fff;
+    margin-top: 1.6em;
+    margin-right: 1em;
+    text-align: right;
+    line-height: 110px;
+}
+#title {
+    margin-top: 1em;
+}
+.h1yellow {
+    font-family: BebasNeue;
+    font-size: 115px;
+    color: #f4b125;
+    margin-top: -1.2em;
+    margin-right: 10em;
+    margin-left: 0.1em;
+    text-align: right;
+    line-height: 110px;
 }
 h3,
+
 .h3 {
-    font-size: 25px;
-    color: #fff;
+    font-family: BebasNeue;
+    font-size: 18px;
+    color: #f4b125;
     margin-top: -2px;
+    font-style: regular;
+    text-align: right;
+    line-height: 12px;
+}
+
+h3:hover {
+    color: #fff;
 }
 #resume {
     margin-top: -15px;
@@ -188,8 +355,8 @@ h3,
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/newback.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
+/*    background: url(../img/astro-back.png);
+*/        -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
@@ -277,11 +444,11 @@ SIDEBAR
     position: fixed;
     right: 0;
     border: 0;
-    width: 220px;
+    width: 20px;
     height: 100%;
     transform: translateX(220px);
     overflow-y: auto;
-    background: #ffffff;
+    background: #000000;
     -webkit-transition: none !important;
     -moz-transition: all .4s ease 0;
     -ms-transition: all .4s ease 0;
@@ -379,93 +546,158 @@ SIDEBAR
 ROCKET
 *************************************************************************************/
 #rocketcontainer {
-    width: 100px;
-    height: 100px;
     position: absolute;
     overflow: visible;
-    padding-left: 200%;
+    padding-left: 100%;
     pointer-events: none;
+    margin-top: 3.5em;
     background: transparent;
 }
 .rocket {
-    margin-top: -11%;
+    margin-top: -35%;
     position: absolute;
-    left: 12.5%;
-    width: 25%;
-    height: 100px;
-    background: url(../img/tagt-coordinator-rocket.png) no-repeat 0 center;
-    -webkit-animation: orbit 10s linear infinite;
-    -moz-animation: orbit 10s linear infinite;
-    animation: orbit 10s linear infinite;
-    transition: background-position .5s;
+    left: -5%;
+    width: 50%;
+    height: 500px;
+    background: url(../img/astronaut.png) no-repeat 0 center;
+    background-size: 100%;
+    -webkit-animation: orbit 3s linear infinite;
+    -moz-animation: orbit 3s linear infinite;
+    animation: orbit 3s linear infinite;
+    transition: background-position .4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 #rocketcontainer:hover .rocket {
     background-position: 0 centre;
 }
 @-webkit-keyframes orbit {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-    }
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 40px); }
+    to   { transform: translate(0, -0px); }  
 }
 @keyframes orbit {
-    from {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(360deg);
-    }
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 40px); }
+    to   { transform: translate(0, -0px); }  
 }
 @-moz-keyframes orbit {
-    from {
-        -moz-transform: rotate(0deg);
-    }
-    to {
-        -moz-transform: rotate(360deg);
-    }
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 40px); }
+    to   { transform: translate(0, -0px); }  
 }
 /************************************************************************************
 ABOUT
 *************************************************************************************/
+.about {
+    height: 500px;
+}
 #aboutme {
-    padding-left: 15%;
-    padding-right: 15%;
-    float: left;
+    background: url(../img/astro-back.png);
+
+/*    float: left;
+*/}
+
+#pictop {
+     padding-left: 5%;
+    padding-right: 5%;
+    background: url(../img/astro-back.png) center center scroll;   
+    background-size: 100%;
+    height: 80%;
 }
 #mepic {
-    margin-top: 5%;
-    width: 90%;
-    margin-right: 20%;
+    margin-top: -5%;
+    width: 100%;
+    margin-right: 50%;
     height: auto;
 }
 
-.about {
-    padding: 35px 5px 80px 0px;
-    margin-left: 2em;
-    margin-right: 2em;
-    color: #000;
-}
-
 p {
-    color: #000;
-    font-size: 20px;
+    /*font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue.oft');*/
+    color: #fff;
+    font-size: 23px;
 }
 body {
     margin-left: -15px;
 }
 
-.container {
+/*.container {
     overflow-x: hidden;
     width: auto !important;
-}
+}*/
 
 /************************************************************************************
 PORTFOLIO
 *************************************************************************************/
+.btn-group button {
+    background-color: transparent; /* Green background */
+    border: 20px solid white; /* Green border */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    float: center; /* Float the buttons side by side */
+    margin-left: 3em;    
+    width:130px;
+    height:130px;
+    border: none;
+    border-radius: 950em;
+    text-align:center;
+    text-decoration:none;
+    background: transparent;
+/*    box-shadow: 0 0 10px white;
+*/    font-size:16px;
+    color: #f4b125;
+    font-weight:bold;
+    text-align: center;
+}
+
+.text-group button {
+       background-color: white; /* Green background */
+    border: 20px solid white; /* Green border */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    float: center; /* Float the buttons side by side */
+    margin-left: 3em;    
+    width:130px;
+    border: none;
+    border-radius: 950em;
+    text-align:center;
+    text-decoration:none;
+    background: transparent;
+/*    box-shadow: 0 0 10px white;
+*/  font-size:16px;
+    color: #f4b125;
+    font-weight:bold;
+    text-align: center; 
+}
+#project1 {
+    background: url(../img/planet1.png) no-repeat center center;
+}
+
+#project2 {
+    background: url(../img/planet2.png) no-repeat center center;
+
+}
+
+#project3 {
+    background: url(../img/planet3.png) no-repeat center center;
+
+}
+
+#project4 {
+    background: url(../img/planet4.png) no-repeat center center;
+}
+
+.btn-group, .text-group {
+    margin-left: 22%;
+    margin-top: 10em;
+}
+
+.text-group {
+    margin-bottom: -10em;
+    margin-left: 18%;
+}
+
 #moreinfo,
 #moreprojects {
     border-color: #000;
@@ -479,7 +711,9 @@ PORTFOLIO
     color: #d9534f;
 }
 .portfolio {
+    background: url(../img/astro-back.png);
     border: 0;
+    height: 600px;
 }
 .portfolio-item {
     margin-bottom: 0;
@@ -490,7 +724,8 @@ PORTFOLIO
     border: 0;
 }
 .img-portfolio:hover {
-    opacity: .8;
+    opacity: .
+    8;
 }
 #mobilesitetext {
     margin-top: -5%;
@@ -678,7 +913,10 @@ BLOG
 #bot-2,
 #bot-3,
 #bot-4,
-#bot-5 {
+#bot-5,
+#leftshark-1,
+#leftshark-2,
+#leftshark-3 {
     width: 43%;
     margin-top: 2%;
     border: 0.2px solid #000;
@@ -734,8 +972,9 @@ SIDEBAR
         visibility: hidden;
     }
     .lead {
-        margin-left: 5%;
+        margin-left: 15em;
         text-align: left;
+        color: #fff;
     }
     h3,
     .h3 {
@@ -780,16 +1019,19 @@ ROCKET
         position: absolute;
         overflow: visible;
         padding-left: 0;
+        margin-top: 0em;
         pointer-events: none;
         background: transparent;
     }
     .rocket {
-        margin-top: 0;
+        margin-top: 15px;
         position: absolute;
         left: 5%;
-        width: 40%;
-        height: 100px;
-        background: url(http://allysonaberg.com/wp-content/uploads/2016/07/dick.png) no-repeat -20px center;
+        top: 5%;
+        width: 0%;
+        height: 10px;
+        background: url(http://allysonaberg.com/wp-content/uploads/2016/07/dick.png) no-repeat center;
+        background-size: 100%;
         -webkit-animation: none !important;
         -moz-animation: none !important;
         animation: none !important;
@@ -866,7 +1108,7 @@ MEDIA QUERIES
     }
     #mepic {
         margin-top: -5%;
-        width: 50%;
+        width: 30%;
         height: auto;
 
     }
