@@ -88,16 +88,14 @@ header,
 
 .columnsContainer, footer, header { 
     position: relative; margin: 0em;
-    margin-top: -1em;
+    margin-right: 5em;
  }
 
-.leftColumn, .rightColumn, footer{ #ccc; padding: 1.55em; }
 
 .leftColumn {
  margin-bottom: 8em;
  color: #fff;
  text-align: left;
- margin-top: -4em;
  margin-left: 20em;
  width: 40em;
   }
@@ -121,13 +119,11 @@ body {
 }
 
 .text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+    display: block;
+    margin-right: 20em;
+    margin-left: 15em;
 }
 .text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
     font-size: 4.5em;
     font-weight: 700;
 }
@@ -216,72 +212,34 @@ NAVIGATION
     text-decoration: none;
     color: #fff;
 }
-/*.nav {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
 
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}*/
 /************************************************************************************
 HOME
 *************************************************************************************/
 
-.number, .numberYellow {
+.numberYellow {
     font-size: 150px;
     margin-top: 0.15em;
     margin-right: 0.1em;
     color: #f4b125;
 }
 
-.number {
-    margin-right: -0.4em;
-}
-
-
-.line {
-    margin-right: 9em;
-    margin-left: 53em;
-    text-align: right;
+#pictop {
+     padding-left: 5%;
+/*    padding-right: 5%;
+*/    background: url(../img/astro-back.png) center center scroll;   
+    background-size: 100%;
+    height: 75%;
 }
 
 hr {
-    display: block;
     height: 1px;
-    border: 0;
     border-top: 2px solid #ccc;
-/*    margin: 1.2em 0;
-*//*    margin-right: -2em;
-*/    padding: 0;
-    color: #000;
-}
-.infoBlock {
-    display: block;
     padding: 0;
-}
-.info {
-    font-family: BebasNeue;
-    font-weight: regular;
-    letter-spacing: 2px;
-    background: transparent;
-    font-size: 22px;
-    color: #fff;
-    margin-top: -20px;
-    margin-left: 82%;
-    border: none;
-    text-align: left;
-    line-height: 10px;
-}
-.info:hover, .info:active {
-    color: #f4b125;
-    text-decoration: none;
-    border: none;
+    color: #000;
+    width: 15em;
+    display: block;
+    margin-right: 9em;
 }
 
 /************************************************************************************
@@ -334,24 +292,26 @@ ASTRONAUT
 ABOUT
 *************************************************************************************/
 .about {
-    height: 600px;
+    height: 500px;
 }
 
 #aboutme {
     background: url(../img/astro-back.png);
 }
 
+#aboutText, .rightColumn, .leftColumn {
+    margin-top: 5em;
+    margin-right: 1em;
+    display: inline;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.leftColumn {
+    text-align: left;
+}
 
-#aboutText {
-    margin-top: 1em;
-}
-#pictop {
-     padding-left: 5%;
-    padding-right: 5%;
-    background: url(../img/astro-back.png) center center scroll;   
-    background-size: 100%;
-    height: 75%;
-}
 #mepic {
     margin-top: 5%;
     width: 100%;
@@ -359,12 +319,12 @@ ABOUT
     height: auto;
 }
 
-/*.work {
-    color: #fff;
-    font-size: 22px;
-    border: none;
-    background-color: transparent;
-}*/
+#details {
+    font-size: 23px;
+    line-height: 1px;
+    margin-right: 5.5em;
+    margin-top: 1em;
+}
 /************************************************************************************
 PORTFOLIO
 *************************************************************************************/
@@ -808,7 +768,7 @@ MEDIA QUERIES
 /* MEDIA QUERIES */
 @media screen and (min-width: 45.5em ) {
   .leftColumn { margin-right: 21.5em; }
-    .rightColumn { position: absolute; top: 0; right: 0; width: 18.75em; }   
+    .rightColumn { position: absolute; top: 0; right: -20em; width: 18.75em; }   
 
 }
 
@@ -830,9 +790,8 @@ h1,
     font-size: 115px;
     color: #f4b125;
     margin-top: -1.2em;
-    margin-right: 10em;
     margin-left: 0.1em;
-    text-align: right;
+    text-align: left;
     line-height: 110px;
 }
 h3,
@@ -1114,6 +1073,10 @@ MEDIA QUERIES
         width: 55%;
         height: 800px;
     }
+
+/*    .info {
+        margin-left: 32%; 
+    }*/
 }
 /* for 700px or less */
 
@@ -1135,8 +1098,14 @@ MEDIA QUERIES
         margin-top: -7%;
         width: 30%;
         height: auto;
-
     }
+/*    .info {
+        display: block;
+        margin-left: 82%; 
+        margin-right: 10%;
+        width: 50em;
+    }*/
+
 }
 /* for 480px or less */
 
@@ -1162,5 +1131,10 @@ MEDIA QUERIES
         font-size: 4.5em;
         font-weight: 700;
     }
+
+/*    .info {
+        margin-left: 12%; 
+        margin-right: 10%;
+    }*/
 }
 
