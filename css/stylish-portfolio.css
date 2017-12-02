@@ -3,21 +3,88 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-/* Global Styles */
-
+/************************************************************************************
+GENERAL STRUCTURE
+*************************************************************************************/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
     font-family: 'BebasNeue';
     src: url('../fonts/BebasNeue.oft');
     color: #666;
+    margin: 0;
 }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
-body { margin: 0; 
-    }
+.inline-items {
+  margin-top: 0;
+}
+
+.inline-items li {
+  margin-left: 0;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inline-items li:first-child {
+  margin-left: 0;
+  border: none;
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.inline-items li:last-child {
+  padding-right: 0;
+}
+
+/*#pagewrap {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}*/
+header {
+    height: 10px;
+}
+
+/*#content {
+    width: 290px;
+    float: left;
+    padding: 5px 15px;
+    background: #f8f8f8;
+
+}*/
+/*#middle {
+    width: 294px;    
+    float: left;
+    padding: 5px 15px;
+    margin: 0px 5px 5px 5px;
+}*/
+/*#sidebar {
+    width: 270px;
+    padding: 5px 15px;
+    float: left;
+    background: #f0efef;
+
+}*/
+
+footer {
+    clear: both;
+    padding: 0 15px;
+}
+
+header,
+#content,
+#middle,
+#sidebar {
+    margin-bottom: 5px;
+}
+
+.container {
+    margin-left: -3em;
+}
 
 .columnsContainer, footer, header { 
     position: relative; margin: 0em;
@@ -27,24 +94,65 @@ body { margin: 0;
 .leftColumn, .rightColumn, footer{ #ccc; padding: 1.55em; }
 
 .leftColumn {
- margin-bottom: 5em;
+ margin-bottom: 8em;
  color: #fff;
  text-align: left;
  margin-top: -4em;
  margin-left: 20em;
  width: 40em;
   }
-
-.number, .numberYellow {
-    font-size: 150px;
-    margin-top: 0.15em;
-    margin-right: 0.1em;
-    color: #f4b125;
+/************************************************************************************
+GENERAL TEXT (NO QUERIES)
+*************************************************************************************/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin: 1.2em 0;
+    margin-right: -2em;
+    padding: 0;
+    color: #000;
+}
+h2 {
+    font-size: 20px;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    width: auto !important;
+}
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0 auto !important;
+    margin-left: -15px;
 }
 
-.number {
-    margin-right: -0.4em;
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+p {
+    color: #fff;
+    font-size: 23px;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+/************************************************************************************
+NAVIGATION
+*************************************************************************************/
 
 .navigation {
     -webkit-transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
@@ -58,7 +166,7 @@ body { margin: 0;
     -o-transition-delay: 1s;
     transition-delay: 1s;
     position: fixed;
-    top: 19em;
+    top: 21em;
     right: 3.2em;
     width: 40px;
     z-index: 100;
@@ -70,11 +178,10 @@ body { margin: 0;
 
 .navBubble {
     display:block;
-    width:25px;
-    height:25px;
+    width:15px;
+    height:15px;
     line-height:50px;
     border: 1px solid #f4b125;
-   border: none;
     border-radius: 50%;
     text-align:center;
     text-decoration:none;
@@ -110,15 +217,43 @@ body { margin: 0;
     color: #f4b125;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 2px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-    color: #000;
+.navBubbleText:hover {
+    color: #fff;
+    text-decoration: none;
 }
+
+.navBubbleText:active {
+    text-decoration: none;
+    color: #fff;
+}
+/*.nav {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}*/
+/************************************************************************************
+HOME
+*************************************************************************************/
+
+.number, .numberYellow {
+    font-size: 150px;
+    margin-top: 0.15em;
+    margin-right: 0.1em;
+    color: #f4b125;
+}
+
+.number {
+    margin-right: -0.4em;
+}
+
 
 .line {
     margin-right: 9em;
@@ -131,7 +266,7 @@ hr {
     font-weight: regular;
     letter-spacing: 2px;
     background: transparent;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     margin-top: -20px;
     margin-left: 82%;
@@ -145,51 +280,526 @@ hr {
     text-decoration: none;
     border: none;
 }
-.navBubbleText:hover {
+
+/************************************************************************************
+ASTRONAUT
+*************************************************************************************/
+#rocketcontainer {
+    position: absolute;
+    overflow: visible;
+    padding-left: 100%;
+    pointer-events: none;
+    margin-top: 3.5em;
+    background: transparent;
+}
+.rocket {
+    margin-top: -35%;
+    position: absolute;
+    left: -5%;
+    width: 50%;
+    height: 500px;
+    background: url(../img/astronaut.png) no-repeat 0 center;
+    background-size: 100%;
+    -webkit-animation: orbit 5s linear infinite;
+    -moz-animation: orbit 5s linear infinite;
+    animation: orbit 5s linear infinite;
+    transition: background-position .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#rocketcontainer:hover .rocket {
+    background-position: 0 centre;
+}
+@-webkit-keyframes orbit {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 60px); }
+    to   { transform: translate(0, -0px); }  
+}
+@keyframes orbit {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 60px); }
+    to   { transform: translate(0, -0px); }  
+}
+@-moz-keyframes orbit {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 60px); }
+    to   { transform: translate(0, -0px); }  
+}
+/************************************************************************************
+ABOUT
+*************************************************************************************/
+.about {
+    height: 600px;
+}
+
+#aboutme {
+    background: url(../img/astro-back.png);
+}
+
+
+#aboutText {
+    margin-top: 1em;
+}
+#pictop {
+     padding-left: 5%;
+    padding-right: 5%;
+    background: url(../img/astro-back.png) center center scroll;   
+    background-size: 100%;
+    height: 75%;
+}
+#mepic {
+    margin-top: 5%;
+    width: 100%;
+    margin-right: 50%;
+    height: auto;
+}
+
+/*.work {
     color: #fff;
-    text-decoration: none;
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
+}*/
+/************************************************************************************
+PORTFOLIO
+*************************************************************************************/
+.portfolio {
+    background: url(../img/astro-back.png);
+    border: 0;
+    height: 600px;
+}
+.portfolio-item {
+    margin-bottom: 0;
+    margin-left: -30px;
+}
+.img-portfolio {
+    margin-bottom: 0;
+    border: 0;
+}
+.img-portfolio:hover {
+    opacity: .
+    8;
 }
 
-.navBubbleText:active {
-    text-decoration: none;
+.btn-group button {
+    background-color: transparent; /* Green background */
+    border: 20px solid white; /* Green border */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    float: center; /* Float the buttons side by side */
+    margin-left: 5em;    
+    width:130px;
+    height:130px;
+    border: none;
+    border-radius: 950em;
+    text-align:center;
+    text-decoration:none;
+    background: transparent;
+/*    box-shadow: 0 0 10px white;
+*/    font-size:16px;
+    color: #f4b125;
+    font-weight:bold;
+    text-align: center;
+}
+
+.text-group button {
+       background-color: white; /* Green background */
+    border: 20px solid white; /* Green border */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    float: center; /* Float the buttons side by side */
+    margin-left: 4em;    
+    width:130px;
+    border: none;
+    border-radius: 950em;
+    text-align:center;
+    text-decoration:none;
+    background: transparent;
+/*    box-shadow: 0 0 10px white;
+*/  font-size:20px;
+    color: #f4b125;
+    font-weight:bold;
+    text-align: center; 
+}
+#project1 {
+    background: url(../img/planet1.png) no-repeat center center;
+}
+
+#project2 {
+    background: url(../img/planet2.png) no-repeat center center;
+
+}
+
+#project3 {
+    background: url(../img/planet3.png) no-repeat center center;
+
+}
+
+#project4 {
+    background: url(../img/planet4.png) no-repeat center center;
+}
+#text1:hover, #text2:hover, #text3:hover, #text4:hover {
+    background-color: transparent;
+}
+
+.btn-group, .text-group {
+    margin-left: 22%;
+    margin-top: 8em;
+}
+
+.text-group {
+    margin-top: 1em;
+    margin-bottom: -10em;
+    margin-left: 22%;
+}
+
+/*#moreinfo,
+#moreprojects {
+    border-color: #000;
+}*/
+/*#moreprojects {
+    margin-top: -15%;
+}*/
+/*#moreinfo:hover,
+#moreprojects:hover {
+    border-color: #d9534f;
+    color: #d9534f;
+}*/
+
+#mobilesitetext {
+    margin-top: -5%;
+    visibility: hidden;
+}
+/************************************************************************************
+PORTFOLIO ANIMATIONS
+*************************************************************************************/
+/*.grid {
+    padding: 20px 20px 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+.grid li {
+    display: inline-block;
+    width: 440px;
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+.grid figure {
+    margin: 0;
+    position: relative;
+}
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+/* The lower caption and background */
+
+/*.grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: #d9534f;
     color: #fff;
+    border: 1px;
+    border-color: red;
+}*/
+/*The upper caption */
+
+/*.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}*/
+/*the button*/
+
+/*.grid figcaption a {
+*//*    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #fff;
+    color: #d9534f;
 }
-.nav {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+.cs-style-1 figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: transform 0.3s, opacity .3s;
+}
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+    opacity: 1;
+    transform: translate(15px, 15px);
+}
+.cs-style-1 figcaption h3 {
+    margin-top: 70px;
+}
+.cs-style-1 figcaption span {
+    display: block;
+}
+.cs-style-1 figcaption a {
+    margin-top: 30px;
+}*/
+
+/*@media screen and (max-width: 31.5em) {
+    .grid {
+        padding: 10px 10px 100px;
+    }
+    .grid li {
+        width: 100%;
+        min-width: 300px;
+    }
+}*/
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+footer {
+    padding-top: 0;
+    text-align: center;
+}
+#to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+/************************************************************************************
+BLOG
+*************************************************************************************/
+#hydra-1,
+#hydra-2,
+#web-1,
+#porfolio-4point0,
+#portfolio-4point1,
+#vision-1,
+#vision-2 {
+    width: 100%;
+    height: auto;
+}
+#photocontainer {
+    width: 100%;
+    margin-left: 30%;
+    padding: 0;
+}
+#hydraimage {
+    width: 100%;
+}
+#subtitleport {
+    color: gray;
+    font-size: 18px;
+}
+#descriptionport {
+    margin-top: 25%;
+}
+#textheader {
+    margin-top: 30%;
+    text-align: center;
+}
+#project-close:hover {
+    border-color: #fff;
+    color: #d9534f;
+}
+#photocontainer {
+    width: 70%;
+    height: 100%;
+}
+#textcontainer {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow: scroll;
+}
+#textcontainer > p {
+    margin-top: 0.5em;
+}
+#portpage {
+    width: 100%;
+    height: 100%;
+    width: 0 auto !important;
+    overflow-x: hidden !important;
+    margin: 0;
+    border: 0;
+}
+#portfolio-4,
+#swift-1,
+#portfolio-4point0,
+#portfolio-4point1 {
+    width: 100%;
+    height: auto;
+}
+#mohp-1,
+#mohp-2,
+#mohp-3,
+#mohp-4,
+#mohp-5,
+#mohp-6 {
+    width: 40%;
+    margin-top: 2%;
+    border: 1px solid #000;
+}
+#bot-1,
+#bot-2,
+#bot-3,
+#bot-4,
+#bot-5,
+#leftshark-1,
+#leftshark-2,
+#leftshark-3 {
+    width: 43%;
+    margin-top: 2%;
+    border: 0.2px solid #000;
+}
+#mobilesitetitle {
+    color: black;
+}
+/************************************************************************************
+MOBILE
+*************************************************************************************/
+@media only screen and (min-width: 0px) and (max-width: 740px) {
+    .header {
+        display: table;
+        position: relative;
+        text-align: center;
+        background: url(../img/bg.jpg) no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    #mobilesitetext {
+        margin-top: 1%;
+        visibility: visible;
+        text-align: center;
+
+    }
+    #mobilesitehead {
+        text-align: center;
+    }
+    #hobbiestext {
+        visibility: hidden;
+    }
+    html,
+    body {
+        width: auto;
+        height: 100%;
+        padding: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 auto !important;
+        width: auto !important;
+    }
+/************************************************************************************
+SIDEBAR
+*************************************************************************************/    
+    #sidebar-wrapper {
+        width: 0;
+        height: 0;
+    }
+    #menu-toggle {
+        visibility: hidden;
+    }
+    .lead {
+        margin-left: 15em;
+        text-align: left;
+        color: #fff;
+    }
+    h3,
+    .h3 {
+        font-size: 18px;
+        color: #fff;
+        margin-top: -2px;
+        margin-left: 3%;
+    }
+    #to-top {
+        visibility: hidden;
+    }
+    #email,
+    #github,
+    #linkedin {
+        width: 40px;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    #hobbiestext {
+        visibility: hidden;
+    }
+    .progress > .progress-completed {
+        font-size: 20px;
+        margin-top: 2%;
+        margin-right: 3%;
+        width: auto !important;
+    }
+    .progress {
+        margin-left: 5%;
+        margin-right: 1%;
+    }
+    .callout {
+        display: none;
+        width: 0;
+    }
+/************************************************************************************
+ROCKET
+*************************************************************************************/    
+    #rocketcontainer {
+        width: 0;
+        height: 0;
+        position: absolute;
+        overflow: visible;
+        padding-left: 0;
+        margin-top: 0em;
+        pointer-events: none;
+        background: transparent;
+    }
+    .rocket {
+        margin-top: 15px;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        width: 0%;
+        height: 10px;
+        background: url(http://allysonaberg.com/wp-content/uploads/2016/07/dick.png) no-repeat center;
+        background-size: 100%;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        animation: none !important;
+        transition: background-position .8s;
+    }
+    #rocketcontainer:hover .rocket {
+        background-position: 30px centre;
+    }
+    @-webkit-keyframes orbit {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @keyframes orbit {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(0deg);
+        }
+    }
 }
 
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-.inline-items {
-  margin-top: 0;
-}
-
-.inline-items li {
-  margin-left: 0;
-  border-left: 1px solid black;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.inline-items li:first-child {
-  margin-left: 0;
-  border: none;
-  padding-left: 0;
-  padding-right: 10px;
-}
-
-.inline-items li:last-child {
-  padding-right: 0;
-}
-
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
 /* MEDIA QUERIES */
 @media screen and (min-width: 45.5em ) {
   .leftColumn { margin-right: 21.5em; }
@@ -197,91 +807,6 @@ hr {
 
 }
 
-.work {
-    color: #fff;
-    font-size: 22px;
-    border: none;
-    background-color: transparent;
-}
-/************************************************************************************
-GENERAL STRUCTURE
-*************************************************************************************/
-#aboutText {
-    margin-top: 1em;
-}
-#pagewrap {
-    padding: 5px;
-    width: 960px;
-    margin: 20px auto;
-}
-header {
-    height: 10px;
-/*    padding: 0 15px;
-*/}
-#content {
-    width: 290px;
-    float: left;
-    padding: 5px 15px;
-}
-#middle {
-    width: 294px;    
-    float: left;
-    padding: 5px 15px;
-    margin: 0px 5px 5px 5px;
-}
-#sidebar {
-    width: 270px;
-    padding: 5px 15px;
-    float: left;
-}
-footer {
-    clear: both;
-    padding: 0 15px;
-}
-
-#content {
-    background: #f8f8f8;
-}
-#sidebar {
-    background: #f0efef;
-}
-header,
-#content,
-#middle,
-#sidebar {
-    margin-bottom: 5px;
-}
-
-}
-h2 {
-    font-size: 20px;
-}
-html,
-body {
-    width: 100%;
-    height: 100%;
-    width: auto !important;
-}
-body {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    overflow-x: hidden;
-    margin: 0 auto !important;
-}
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
-}
-
-/************************************************************************************
-MEDIA QUERIES
-*************************************************************************************/
 h1,
 .h1 {
     font-family: BebasNeue;
@@ -543,524 +1068,6 @@ SIDEBAR
 }
 
 /************************************************************************************
-ROCKET
-*************************************************************************************/
-#rocketcontainer {
-    position: absolute;
-    overflow: visible;
-    padding-left: 100%;
-    pointer-events: none;
-    margin-top: 3.5em;
-    background: transparent;
-}
-.rocket {
-    margin-top: -35%;
-    position: absolute;
-    left: -5%;
-    width: 50%;
-    height: 500px;
-    background: url(../img/astronaut.png) no-repeat 0 center;
-    background-size: 100%;
-    -webkit-animation: orbit 3s linear infinite;
-    -moz-animation: orbit 3s linear infinite;
-    animation: orbit 3s linear infinite;
-    transition: background-position .4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-#rocketcontainer:hover .rocket {
-    background-position: 0 centre;
-}
-@-webkit-keyframes orbit {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 40px); }
-    to   { transform: translate(0, -0px); }  
-}
-@keyframes orbit {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 40px); }
-    to   { transform: translate(0, -0px); }  
-}
-@-moz-keyframes orbit {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 40px); }
-    to   { transform: translate(0, -0px); }  
-}
-/************************************************************************************
-ABOUT
-*************************************************************************************/
-.about {
-    height: 500px;
-}
-#aboutme {
-    background: url(../img/astro-back.png);
-
-/*    float: left;
-*/}
-
-#pictop {
-     padding-left: 5%;
-    padding-right: 5%;
-    background: url(../img/astro-back.png) center center scroll;   
-    background-size: 100%;
-    height: 80%;
-}
-#mepic {
-    margin-top: -5%;
-    width: 100%;
-    margin-right: 50%;
-    height: auto;
-}
-
-p {
-    /*font-family: 'BebasNeue';
-    src: url('../fonts/BebasNeue.oft');*/
-    color: #fff;
-    font-size: 23px;
-}
-body {
-    margin-left: -15px;
-}
-
-/*.container {
-    overflow-x: hidden;
-    width: auto !important;
-}*/
-
-/************************************************************************************
-PORTFOLIO
-*************************************************************************************/
-.btn-group button {
-    background-color: transparent; /* Green background */
-    border: 20px solid white; /* Green border */
-    color: white; /* White text */
-    cursor: pointer; /* Pointer/hand icon */
-    float: center; /* Float the buttons side by side */
-    margin-left: 3em;    
-    width:130px;
-    height:130px;
-    border: none;
-    border-radius: 950em;
-    text-align:center;
-    text-decoration:none;
-    background: transparent;
-/*    box-shadow: 0 0 10px white;
-*/    font-size:16px;
-    color: #f4b125;
-    font-weight:bold;
-    text-align: center;
-}
-
-.text-group button {
-       background-color: white; /* Green background */
-    border: 20px solid white; /* Green border */
-    color: white; /* White text */
-    cursor: pointer; /* Pointer/hand icon */
-    float: center; /* Float the buttons side by side */
-    margin-left: 3em;    
-    width:130px;
-    border: none;
-    border-radius: 950em;
-    text-align:center;
-    text-decoration:none;
-    background: transparent;
-/*    box-shadow: 0 0 10px white;
-*/  font-size:16px;
-    color: #f4b125;
-    font-weight:bold;
-    text-align: center; 
-}
-#project1 {
-    background: url(../img/planet1.png) no-repeat center center;
-}
-
-#project2 {
-    background: url(../img/planet2.png) no-repeat center center;
-
-}
-
-#project3 {
-    background: url(../img/planet3.png) no-repeat center center;
-
-}
-
-#project4 {
-    background: url(../img/planet4.png) no-repeat center center;
-}
-
-.btn-group, .text-group {
-    margin-left: 22%;
-    margin-top: 10em;
-}
-
-.text-group {
-    margin-bottom: -10em;
-    margin-left: 18%;
-}
-
-#moreinfo,
-#moreprojects {
-    border-color: #000;
-}
-#moreprojects {
-    margin-top: -15%;
-}
-#moreinfo:hover,
-#moreprojects:hover {
-    border-color: #d9534f;
-    color: #d9534f;
-}
-.portfolio {
-    background: url(../img/astro-back.png);
-    border: 0;
-    height: 600px;
-}
-.portfolio-item {
-    margin-bottom: 0;
-    margin-left: -30px;
-}
-.img-portfolio {
-    margin-bottom: 0;
-    border: 0;
-}
-.img-portfolio:hover {
-    opacity: .
-    8;
-}
-#mobilesitetext {
-    margin-top: -5%;
-    visibility: hidden;
-}
-/************************************************************************************
-PORTFOLIO ANIMATIONS
-*************************************************************************************/
-.grid {
-    padding: 20px 20px 100px;
-    max-width: 1300px;
-    margin: 0 auto;
-    list-style: none;
-    text-align: center;
-}
-.grid li {
-    display: inline-block;
-    width: 440px;
-    margin: 0;
-    padding: 20px;
-    text-align: left;
-    position: relative;
-}
-.grid figure {
-    margin: 0;
-    position: relative;
-}
-.grid figure img {
-    max-width: 100%;
-    display: block;
-    position: relative;
-}
-/* The lower caption and background */
-
-.grid figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    background: #d9534f;
-    color: #fff;
-    border: 1px;
-    border-color: red;
-}
-/*The upper caption */
-
-.grid figcaption h3 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
-/*the button*/
-
-.grid figcaption a {
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 2px;
-    display: inline-block;
-    background: #fff;
-    color: #d9534f;
-}
-.cs-style-1 figcaption {
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    text-align: center;
-    backface-visibility: hidden;
-    transition: transform 0.3s, opacity .3s;
-}
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
-    opacity: 1;
-    transform: translate(15px, 15px);
-}
-.cs-style-1 figcaption h3 {
-    margin-top: 70px;
-}
-.cs-style-1 figcaption span {
-    display: block;
-}
-.cs-style-1 figcaption a {
-    margin-top: 30px;
-}
-/************************************************************************************
-PORTFOLIO ANIMATIONS
-*************************************************************************************/
-@media screen and (max-width: 31.5em) {
-    .grid {
-        padding: 10px 10px 100px;
-    }
-    .grid li {
-        width: 100%;
-        min-width: 300px;
-    }
-}
-/************************************************************************************
-FOOTER
-*************************************************************************************/
-footer {
-    padding-top: 0;
-    text-align: center;
-}
-#to-top {
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-}
-/************************************************************************************
-BLOG
-*************************************************************************************/
-#hydra-1,
-#hydra-2,
-#web-1,
-#porfolio-4point0,
-#portfolio-4point1,
-#vision-1,
-#vision-2 {
-    width: 100%;
-    height: auto;
-}
-#photocontainer {
-    width: 100%;
-    margin-left: 30%;
-    padding: 0;
-}
-#hydraimage {
-    width: 100%;
-}
-#subtitleport {
-    color: gray;
-    font-size: 18px;
-}
-#descriptionport {
-    margin-top: 25%;
-}
-#textheader {
-    margin-top: 30%;
-    text-align: center;
-}
-#project-close:hover {
-    border-color: #fff;
-    color: #d9534f;
-}
-#photocontainer {
-    width: 70%;
-    height: 100%;
-}
-#textcontainer {
-    width: 30%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    overflow: scroll;
-}
-#textcontainer > p {
-    margin-top: 0.5em;
-}
-#portpage {
-    width: 100%;
-    height: 100%;
-    width: 0 auto !important;
-    overflow-x: hidden !important;
-    margin: 0;
-    border: 0;
-}
-#portfolio-4,
-#swift-1,
-#portfolio-4point0,
-#portfolio-4point1 {
-    width: 100%;
-    height: auto;
-}
-#mohp-1,
-#mohp-2,
-#mohp-3,
-#mohp-4,
-#mohp-5,
-#mohp-6 {
-    width: 40%;
-    margin-top: 2%;
-    border: 1px solid #000;
-}
-#bot-1,
-#bot-2,
-#bot-3,
-#bot-4,
-#bot-5,
-#leftshark-1,
-#leftshark-2,
-#leftshark-3 {
-    width: 43%;
-    margin-top: 2%;
-    border: 0.2px solid #000;
-}
-#mobilesitetitle {
-    color: black;
-}
-/************************************************************************************
-MOBILE
-*************************************************************************************/
-@media only screen and (min-width: 0px) and (max-width: 740px) {
-    .header {
-        display: table;
-        position: relative;
-        text-align: center;
-        background: url(../img/bg.jpg) no-repeat center center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    #mobilesitetext {
-        margin-top: 1%;
-        visibility: visible;
-        text-align: center;
-
-    }
-    #mobilesitehead {
-        text-align: center;
-    }
-    #hobbiestext {
-        visibility: hidden;
-    }
-    html,
-    body {
-        width: auto;
-        height: 100%;
-        padding: 0;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 auto !important;
-        width: auto !important;
-    }
-/************************************************************************************
-SIDEBAR
-*************************************************************************************/    
-    #sidebar-wrapper {
-        width: 0;
-        height: 0;
-    }
-    #menu-toggle {
-        visibility: hidden;
-    }
-    .lead {
-        margin-left: 15em;
-        text-align: left;
-        color: #fff;
-    }
-    h3,
-    .h3 {
-        font-size: 18px;
-        color: #fff;
-        margin-top: -2px;
-        margin-left: 3%;
-    }
-    #to-top {
-        visibility: hidden;
-    }
-    #email,
-    #github,
-    #linkedin {
-        width: 40px;
-        margin-left: 1px;
-        margin-right: 1px;
-    }
-    #hobbiestext {
-        visibility: hidden;
-    }
-    .progress > .progress-completed {
-        font-size: 20px;
-        margin-top: 2%;
-        margin-right: 3%;
-        width: auto !important;
-    }
-    .progress {
-        margin-left: 5%;
-        margin-right: 1%;
-    }
-    .callout {
-        display: none;
-        width: 0;
-    }
-/************************************************************************************
-ROCKET
-*************************************************************************************/    
-    #rocketcontainer {
-        width: 0;
-        height: 0;
-        position: absolute;
-        overflow: visible;
-        padding-left: 0;
-        margin-top: 0em;
-        pointer-events: none;
-        background: transparent;
-    }
-    .rocket {
-        margin-top: 15px;
-        position: absolute;
-        left: 5%;
-        top: 5%;
-        width: 0%;
-        height: 10px;
-        background: url(http://allysonaberg.com/wp-content/uploads/2016/07/dick.png) no-repeat center;
-        background-size: 100%;
-        -webkit-animation: none !important;
-        -moz-animation: none !important;
-        animation: none !important;
-        transition: background-position .8s;
-    }
-    #rocketcontainer:hover .rocket {
-        background-position: 30px centre;
-    }
-    @-webkit-keyframes orbit {
-        from {
-            -webkit-transform: rotate(0deg);
-        }
-        to {
-            -webkit-transform: rotate(360deg);
-        }
-    }
-    @keyframes orbit {
-        from {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(0deg);
-        }
-    }
-}
-
-/************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
 /* for 980px or less */
@@ -1107,7 +1114,7 @@ MEDIA QUERIES
         float: none;
     }
     #mepic {
-        margin-top: -5%;
+        margin-top: -7%;
         width: 30%;
         height: auto;
 
