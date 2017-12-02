@@ -104,16 +104,6 @@ header,
 /************************************************************************************
 GENERAL TEXT (NO QUERIES)
 *************************************************************************************/
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 2px solid #ccc;
-    margin: 1.2em 0;
-    margin-right: -2em;
-    padding: 0;
-    color: #000;
-}
 h2 {
     font-size: 20px;
 }
@@ -261,6 +251,20 @@ HOME
     text-align: right;
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #ccc;
+/*    margin: 1.2em 0;
+*//*    margin-right: -2em;
+*/    padding: 0;
+    color: #000;
+}
+.infoBlock {
+    display: block;
+    padding: 0;
+}
 .info {
     font-family: BebasNeue;
     font-weight: regular;
@@ -274,7 +278,6 @@ HOME
     text-align: left;
     line-height: 10px;
 }
-
 .info:hover, .info:active {
     color: #f4b125;
     text-decoration: none;
@@ -293,14 +296,16 @@ ASTRONAUT
     background: transparent;
 }
 .rocket {
-    margin-top: -35%;
+    margin-top: -41%;
     position: absolute;
     left: -5%;
     width: 50%;
-    height: 500px;
-    background: url(../img/astronaut.png) no-repeat 0 center;
-    background-size: 100%;
-    -webkit-animation: orbit 5s linear infinite;
+    height: 800px;
+    background: url(../img/astronaut.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;    -webkit-animation: orbit 5s linear infinite;
     -moz-animation: orbit 5s linear infinite;
     animation: orbit 5s linear infinite;
     transition: background-position .5s;
@@ -1070,8 +1075,15 @@ SIDEBAR
 /************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
+/* for 1200 px or less */
+@media screen and (max-width: 1200px) {
+    .rocket {
+        margin-top: -40em;
+        width: 55%;
+        height: 800px;
+    }
+}
 /* for 980px or less */
-
 @media screen and (max-width: 980px) {
     #pagewrap {
         width: 94%;
@@ -1095,6 +1107,12 @@ MEDIA QUERIES
     header,
     footer {
         padding: 1% 4%;
+    }
+
+    .rocket {
+        margin-top: -40em;
+        width: 55%;
+        height: 800px;
     }
 }
 /* for 700px or less */
