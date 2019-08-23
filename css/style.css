@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+/* GLOBAL STYLES
+----------------------*/
+:root{
+  --dark-blue: #02B3B0;
+  --blue: #60C5C0;
+  --light-blue: var(--light-blue);
+  --pink: #F48183;
+  --grey: grey;
+  --black: #111;
+  --white: #FFF;
+  --tester: red;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    position: relative;
+}
+
+a {
+    color: var(--pink);
+    weight: 200;
+}
+
+a:hover,
+a:focus {
+    color: var(--pink);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  margin-left: 1em;
+}
+
+
+/* MAIN PAGE
+----------------------*/
+
+#homeContainer {
+  margin-top: 15em;
+  margin-left: 10em;
+}
