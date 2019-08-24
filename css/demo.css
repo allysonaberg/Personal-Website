@@ -406,6 +406,10 @@ padding-top: 0;
 	.content--grid {
 		grid-row-gap: 1.5vh;
 	}
+
+	.item__title {
+		font-size: 0.5em;
+	}
 }
 
 @media screen and (max-width: 40em) {
@@ -416,6 +420,10 @@ padding-top: 0;
 		fill: white;
 	}
 
+	.item__title {
+		font-size: 0.5em;
+	}
+	
 	.item__number {
 		font-size: 0.75em;
 	}
