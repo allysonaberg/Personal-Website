@@ -30,6 +30,16 @@ a {
 	outline: none;
 }
 
+#buttn, #bttn:focus {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	outline: none;
+}
+
+
 a:hover,
 a:focus {
 	color: var(--green);
@@ -325,7 +335,7 @@ main {
 }
 
 .item--style-4 .item__deco {
-	fill: #dcdcde;
+	fill: var(--yellow);
 }
 
 .item--style-5 .item__deco {
